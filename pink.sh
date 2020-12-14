@@ -5,13 +5,13 @@ clear
 echo -e "适用于Pixelbook GO 7265网卡驱动修复"
 echo -e "\n\n操作步骤：去除验证→重启→复制驱动→重启"
 echo -e "by:ly2k\n\n"
-myFile="/lib/firmware/iwlwifi-7265D-29.ucode"
+myFile="/lib/firmware/iwlwifi-7265-17.ucode"
 
 function copydrv {
 clear
 sudo chmod 777 /lib/firmware
-curl -O https://github.com/LibreELEC/iwlwifi-firmware/raw/master/firmware/iwlwifi-7265D-29.ucode
-sudo cp iwlwifi-7265D-29.ucode /lib/firmware/
+curl -O https://github.com/LibreELEC/iwlwifi-firmware/raw/master/firmware/iwlwifi-7265-17.ucode
+sudo cp iwlwifi-7265-17.ucode /lib/firmware/
 if [ -f "$myFile" ]; 
 then
     echo -e "复制成功，输入3并回车可重启"
