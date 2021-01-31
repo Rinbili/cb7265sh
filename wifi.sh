@@ -10,7 +10,6 @@ myFile="/lib/firmware/iwlwifi-7265D-29.ucode"
 function copydrv {
 clear
 sudo chmod 777 /lib/firmware
-curl -O https://github.com/LibreELEC/iwlwifi-firmware/raw/master/firmware/iwlwifi-7265D-29.ucode
 sudo cp /home/iwlwifi-7265D-29.ucode /lib/firmware/
 if [ -f "$myFile" ]; 
 then
